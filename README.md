@@ -89,9 +89,14 @@ Make sure to create a `.env` file to store your configuration, like:
 
 
 PORT=3000
+
 DB_HOST=your_postgres_host
+
 DB_PORT=5432
+
 DB_USER=your_user
+
 DB_PASSWORD=your_password
+
 DB_NAME=clientdb
 
