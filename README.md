@@ -2,8 +2,6 @@
 It is about how to create containerization NodeJs App.
 
 
-Here’s a complete `README.md` you can use for your **Node.js backend (`client-management-backend`)**:
-
 ---
 
 markdown
