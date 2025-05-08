@@ -3,12 +3,9 @@ It is about how to create containerization NodeJs App.
 
 
 ---
-
-markdown
 # Client Management Backend
 
 This is the backend API for the Client Management system, built with **Node.js** and **Express**. It provides RESTful endpoints to manage users and connects to a PostgreSQL database.
-
 ---
 
 ## 🚀 Features
@@ -17,22 +14,6 @@ This is the backend API for the Client Management system, built with **Node.js**
 - PostgreSQL database integration
 - Containerized using Docker
 - Production-ready structure
-
----
-
-## 🧱 Project Structure
-
-
-
-client-management-backend/
-├── routes/           # API routes
-├── controllers/      # Route logic
-├── models/           # Database models (if using ORM)
-├── views/            # Old HTML views (for reference, not used in API)
-├── app.js            # Main app entry
-├── Dockerfile        # Docker configuration
-└── package.json      # Project metadata
-
 
 
 ---
@@ -43,26 +24,26 @@ This backend is containerized using Docker.
 
 ### 📝 Dockerfile Explanation
 
-Dockerfile
-# Use an official Node.js image as base
+
+Use an official Node.js image as base
 FROM node:18
 
-# Set working directory inside the container
+Set working directory inside the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json
+Copy package.json and package-lock.json
 COPY package*.json ./
 
-# Install dependencies
+Install dependencies
 RUN npm install
 
-# Copy the rest of the application code
+Copy the rest of the application code
 COPY . .
 
-# Expose the port the app runs on
+Expose the port the app runs on
 EXPOSE 3000
 
-# Start the application
+Start the application
 CMD ["npm", "start"]
 
 
